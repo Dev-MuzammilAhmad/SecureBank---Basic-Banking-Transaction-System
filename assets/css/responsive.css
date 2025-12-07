@@ -1,0 +1,376 @@
+/**
+ * ============================================
+ * Responsive CSS Styles
+ * ============================================
+ * Additional responsive styles for mobile devices
+ * Complements custom.css
+ * ============================================
+ */
+
+/* ============================================
+   MOBILE FIRST - EXTRA SMALL DEVICES
+   < 576px (Mobile Phones)
+   ============================================ */
+
+@media (max-width: 575.98px) {
+    /* Typography adjustments */
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    h4 {
+        font-size: 1.1rem;
+    }
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Cards */
+    .card-custom {
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem !important;
+    }
+    
+    /* Stats Cards */
+    .stats-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .stats-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-card h6 {
+        font-size: 0.85rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    /* Tables */
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .table thead th {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    
+    .table tbody td {
+        padding: 0.5rem;
+    }
+    
+    /* Hide table columns on mobile */
+    .table-responsive .d-none-mobile {
+        display: none !important;
+    }
+    
+    /* Forms */
+    .form-label {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .form-control,
+    .form-select {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    /* Container spacing */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Login/Register cards */
+    .min-vh-100 {
+        min-height: auto !important;
+        padding: 2rem 0;
+    }
+    
+    /* Footer */
+    footer {
+        font-size: 0.8rem;
+        padding: 1.5rem 0 !important;
+    }
+    
+    footer .row > div {
+        text-align: center !important;
+    }
+    
+    /* Alerts */
+    .alert {
+        font-size: 0.875rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Dropdown menus */
+    .dropdown-menu {
+        font-size: 0.875rem;
+    }
+    
+    /* Badges */
+    .badge {
+        font-size: 0.7rem;
+    }
+}
+
+/* ============================================
+   SMALL DEVICES - TABLETS (Portrait)
+   576px - 767.98px
+   ============================================ */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Container adjustments */
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Cards */
+    .card-custom {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Stats cards - 2 columns */
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Tables */
+    .table {
+        font-size: 0.875rem;
+    }
+    
+    /* Buttons */
+    .btn-group-sm > .btn {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   MEDIUM DEVICES - TABLETS (Landscape)
+   768px - 991.98px
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Container adjustments */
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Navigation */
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    /* Stats cards - 2 columns */
+    .row .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    /* Cards */
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    /* Tables - show more columns */
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    /* Forms - better spacing */
+    .form-control,
+    .form-select {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   LARGE DEVICES - DESKTOPS
+   992px - 1199.98px
+   ============================================ */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Container adjustments */
+    .container {
+        max-width: 960px;
+    }
+    
+    /* Optimal spacing */
+    .stats-card {
+        padding: 20px;
+    }
+}
+
+/* ============================================
+   EXTRA LARGE DEVICES
+   >= 1200px
+   ============================================ */
+
+@media (min-width: 1200px) {
+    /* Container adjustments */
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* Better spacing for large screens */
+    .card-body {
+        padding: 2rem;
+    }
+    
+    .stats-card {
+        padding: 25px;
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION
+   ============================================ */
+
+@media (orientation: landscape) and (max-height: 600px) {
+    /* Reduce vertical spacing in landscape mode */
+    .min-vh-100 {
+        min-height: auto !important;
+        padding: 1rem 0;
+    }
+    
+    .mt-5 {
+        margin-top: 2rem !important;
+    }
+    
+    .mb-5 {
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    /* Hide navigation and footer */
+    .navbar,
+    footer,
+    .btn,
+    .alert {
+        display: none !important;
+    }
+    
+    /* Optimize for printing */
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    .card-custom {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+    
+    /* Show all table data */
+    .table {
+        font-size: 10pt;
+    }
+    
+    .table thead {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* Improve touch targets on mobile */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .nav-link,
+    .dropdown-item {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES FOR RESPONSIVE DESIGN
+   ============================================ */
+
+/* Hide on mobile */
+@media (max-width: 767.98px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Show only on mobile */
+.show-mobile {
+    display: none !important;
+}
+
+@media (max-width: 767.98px) {
+    .show-mobile {
+        display: block !important;
+    }
+}
+
+/* Responsive text alignment */
+@media (max-width: 767.98px) {
+    .text-md-start,
+    .text-md-end {
+        text-align: center !important;
+    }
+}
+
+/* Responsive spacing */
+@media (max-width: 767.98px) {
+    .mb-md-0 {
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* ============================================
+   END OF RESPONSIVE CSS
+   ============================================ */
