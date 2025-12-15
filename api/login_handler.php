@@ -17,6 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
     
+    $selected_role = isset($_POST['role']) ? $_POST['role'] : '';
+    if (empty($selected_role)) {
+        header("Location: ../index.php?error=Please select a role");
+        exit();
+    }
+    
     $conn = getDBConnection();
     
     // Prepare statement to prevent SQL injection
@@ -64,6 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // CHECK IF PASSWORD IS VALID
         // ============================================
         if ($isPasswordValid) {
+            // Check if selected role matches the user's actual role
+            if ($user['role'] !== $selected_role) {
+                header("Location: ../index.php?error=Invalid role selected for this account");
+                exit();
+            }
+
             // Set session variables
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['name'] = $user['name'];

@@ -44,6 +44,17 @@ if (isset($_SESSION['user_id'])) {
                         <?php endif; ?>
 
                         <form action="api/login_handler.php" method="POST" onsubmit="return validateLogin()">
+                            <div class="mb-3 text-center">
+                                <label class="form-label d-block fw-bold">Select Role</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="role" id="roleUser" value="Customer" checked>
+                                    <label class="form-check-label" for="roleUser">User</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="role" id="roleAdmin" value="Admin">
+                                    <label class="form-check-label" for="roleAdmin">Admin</label>
+                                </div>
+                            </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
